@@ -1,0 +1,17 @@
+{% if latest_blog_list %}
+<h1>{% block header%}ALL BLOGS{% endblock%}</h1>
+<ul>{% for blog in latest_blog_list %}
+	<li><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></li>
+{% endfor %}
+</ul>
+{%else%}
+<p>no blogs are available</p>
+{%endif%}
+</br>
+</br>
+
+
+<ul>
+	<li>{{ Authorname }}</li>
+
+</ul>
